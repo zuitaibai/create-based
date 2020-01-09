@@ -1,0 +1,13 @@
+body{
+    background:url(../img/glyphicon-list-alt.jpg) no-repeat;
+}
+/* sdfasdfjlskadfj */
+div{
+    box-sizing: border-box;
+    background: linear-gradient(#e66465, #9198e5);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: stretch;
+    border-radius: 50px/15px;
+}
