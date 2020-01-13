@@ -8,10 +8,11 @@ module.exports = function (api) {
     api.cache(true);
 
     const presets = [
+        // @babel/preset-flow
+        // @babel/preset-react
         [
-            // @babel/preset-flow
-            // @babel/preset-react
-            // @babel/preset-typescript
+            // Babel 7.8.0 supports the new ECMAScript 2020 features by default: you don't need to enable individual plugins for
+            // nullish coalescing (??), optional chaining (?.) and dynamic import() anymore with preset-env.
             '@babel/preset-env',
             {
                 useBuiltIns: 'usage',
@@ -24,6 +25,13 @@ module.exports = function (api) {
                     proposals: true,
                 },
                 modules: false, // 对ES6的模块文件不做转化，以便使用tree shaking、sideEffects等
+            }
+        ],
+        [
+            '@babel/preset-typescript',
+            {
+                // allowJs: false,
+                allowSyntheticDefaultImports: true
             }
         ]
     ];
